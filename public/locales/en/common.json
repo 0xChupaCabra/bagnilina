@@ -1,0 +1,62 @@
+{
+  "hero": {
+    "welcome": "WELCOME TO",
+    "title": "BAGNI LINA",
+    "subtitle": "YOUR CORNER OF PARADISE IN CELLE LIGURE (SV)",
+    "seasonal": "SEASONAL OPENING"
+  },
+  "about": {
+    "title": "AN OASIS OF COMFORT AND TAILORED SERVICES",
+    "subtitle": "AT BAGNI LINA EVERY DETAIL IS DESIGNED FOR YOUR WELL-BEING",
+    "description": "Located in the splendid setting of Ponente beach in Celle Ligure, one of the most beautiful villages in Italy, Bagni Lina has been a beloved reference point for decades for families, couples and all those who wish to experience the wonders of the Ligurian sea. Here, relaxation and fun merge into an unforgettable experience, where every visitor, young and old, will feel at home."
+  },
+  "services": {
+    "title": "OUR SERVICES",
+    "bar": {
+      "title": "BAR AND RESTAURANT",
+      "description": "Our welcoming bar awaits you to refresh you with drinks and treats. If you're hungry, you can enjoy cold dishes, perfect for a light and tasty lunch with a sea view."
+    },
+    "dehors": {
+      "title": "SPACIOUS PANORAMIC TERRACE",
+      "description": "Relax and enjoy the unique atmosphere of our spacious terrace. With both wooden and tiled flooring, it offers the ideal environment for a break in total serenity."
+    },
+    "lockers": {
+      "title": "CHANGING ROOMS",
+      "description": "With our umbrella and equipment (deck chair, chair or sun bed of your choice), you'll have access to the changing room to change comfortably, without the need to rent a cabin."
+    },
+    "facilities": {
+      "title": "FACILITIES",
+      "description": "You'll find a practical foot wash, a large washbasin, separate showers (hot in cabin for €1 and cold), and separate bathrooms for men and women, always clean and sanitized."
+    },
+    "accessibility": {
+      "title": "ACCESSIBILITY",
+      "description": "We are proud to offer an inclusive experience; Bagni Lina is equipped with bathrooms and changing rooms dedicated to customers with disabilities, so that the pleasure of the sea is truly accessible to everyone."
+    }
+  },
+  "management": {
+    "title": "NEW MANAGEMENT",
+    "description": "The new management awaits you with a smile! We are excited to welcome you under the new management of Massimo and Luca (our expert lifeguard). Their passion and professionalism will guarantee you a warm welcome and impeccable service.",
+    "cta": "WE AWAIT YOU AT BAGNI LINA FOR AN UNFORGETTABLE SEASON!",
+    "invitation": "COME VISIT US, YOU WON'T BE DISAPPOINTED!"
+  },
+  "contact": {
+    "title": "CONTACT",
+    "email": "ciao@bagnilina.it",
+    "phone": "Tel. 019993190",
+    "address": "Lungomare Colombo, Celle Ligure (SV)"
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "gallery": "Gallery",
+    "contact": "Contact"
+  },
+  "gallery": {
+    "entrance": "Entrance",
+    "walkway": "Walkway",
+    "beach": "Beach",
+    "cabins": "Cabins",
+    "bar": "Bar",
+    "dehors": "Terrace"
+  }
+}

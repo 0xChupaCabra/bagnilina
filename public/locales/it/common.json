@@ -1,0 +1,62 @@
+{
+  "hero": {
+    "welcome": "BENVENUTI AI",
+    "title": "BAGNI LINA",
+    "subtitle": "IL VOSTRO ANGOLO DI PARADISO A CELLE LIGURE (SV)",
+    "seasonal": "APERTURA STAGIONALE"
+  },
+  "about": {
+    "title": "UN'OASI DI COMFORT E SERVIZI SU MISURA",
+    "subtitle": "AI BAGNI LINA OGNI DETTAGLIO È PENSATO PER IL VOSTRO BENESSERE",
+    "description": "Situati nella splendida cornice della spiaggia di Ponente a Celle Ligure, uno dei borghi più belli d'Italia, i Bagni Lina sono da decenni un punto di riferimento amato da famiglie, coppie e tutti coloro che desiderano vivere le meraviglie del mare ligure. Qui, il relax e il divertimento si fondono in un'esperienza indimenticabile, dove ogni visitatore, grandi e piccini, si sentirà come a casa."
+  },
+  "services": {
+    "title": "I NOSTRI SERVIZI",
+    "bar": {
+      "title": "BAR E RISTORAZIONE",
+      "description": "Il nostro accogliente bar vi aspetta per rinfrescarvi con bevande e golosità. Se la fame si fa sentire, potrete gustare piatti di tavola fredda, perfetti per un pranzo leggero e gustoso vista mare."
+    },
+    "dehors": {
+      "title": "AMPIO DEHORS PANORAMICO",
+      "description": "Rilassatevi e godetevi l'atmosfera unica del nostro spazioso dehors. Con pavimentazione sia in legno che piastrellata, offre l'ambiente ideale per una pausa in totale serenità."
+    },
+    "lockers": {
+      "title": "SPOGLIATOI",
+      "description": "Con un nostro ombrellone e la nostra attrezzatura (sdraio, sedia o lettino a vostra scelta), avrete accesso allo spogliatoio per cambiarvi comodamente, senza la necessità di affittare una cabina."
+    },
+    "facilities": {
+      "title": "SERVIZI IGIENICI",
+      "description": "Troverete un pratico lavapiedi, un ampio lavatoio, docce separate (calda in cabina ad €1 e fredda), e bagni distinti per uomo e donna, sempre puliti e igienizzati."
+    },
+    "accessibility": {
+      "title": "ACCESSIBILITÀ",
+      "description": "Siamo fieri di offrire un'esperienza inclusiva; i Bagni Lina sono dotati di bagni e spogliatoi dedicati ai clienti con disabilità, perché il piacere del mare sia davvero accessibile a tutti."
+    }
+  },
+  "management": {
+    "title": "NUOVA GESTIONE",
+    "description": "La nuova gestione vi aspetta con un sorriso! Siamo entusiasti di darvi il benvenuto sotto la nuova gestione di Massimo e Luca (il nostro esperto bagnino). La loro passione e professionalità vi garantiranno un'accoglienza calorosa e un servizio impeccabile.",
+    "cta": "VI ASPETTIAMO AI BAGNI LINA PER UNA STAGIONE INDIMENTICABILE!",
+    "invitation": "VENITE A TROVARCI, NON RIMARRETE DELUSI!"
+  },
+  "contact": {
+    "title": "CONTATTI",
+    "email": "ciao@bagnilina.it",
+    "phone": "Tel. 019993190",
+    "address": "Lungomare Colombo, Celle Ligure (SV)"
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Servizi",
+    "gallery": "Galleria",
+    "contact": "Contatti"
+  },
+  "gallery": {
+    "entrance": "Ingresso",
+    "walkway": "Passerella",
+    "beach": "Spiaggia",
+    "cabins": "Cabine",
+    "bar": "Bar",
+    "dehors": "Dehors"
+  }
+}
