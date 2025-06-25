@@ -151,8 +151,13 @@ export default function Home() {
   }, []);
 
   const scrollToSection = (id) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
     setIsMobileMenuOpen(false);
+    setTimeout(() => {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, 100);
   };
 
   return (
@@ -176,7 +181,7 @@ export default function Home() {
               Bagni Lina
             </motion.div>
             
-            <div className="hidden md:flex items-center space-x-8">
+            <div className="hidden lg:flex items-center space-x-8">
               {Object.entries(t.nav).map(([key, value]) => (
                 <motion.button
                   key={key}
@@ -220,7 +225,7 @@ export default function Home() {
             <motion.button 
               whileTap={{ scale: 0.95 }}
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className={`md:hidden p-2 rounded-lg ${isScrolled ? 'text-gray-700' : 'text-white'}`}
+              className={`lg:hidden p-2 rounded-lg ${isScrolled ? 'text-gray-700' : 'text-white'}`}
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 {isMobileMenuOpen ? (
@@ -241,7 +246,7 @@ export default function Home() {
             opacity: isMobileMenuOpen ? 1 : 0,
           }}
           transition={{ duration: 0.3 }}
-          className="md:hidden overflow-hidden bg-white/95 backdrop-blur-md border-t border-gray-200"
+          className="lg:hidden overflow-hidden bg-white/95 backdrop-blur-md border-t border-gray-200"
         >
           <div className="px-4 py-6 space-y-4">
             {Object.entries(t.nav).map(([key, value]) => (
@@ -502,12 +507,16 @@ export default function Home() {
             {Object.entries(t.services).filter(([key]) => !['title', 'subtitle'].includes(key)).map(([key, service], index) => (
               <motion.div
                 key={key}
-                initial={{ opacity: 0, y: 50 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                viewport={{ once: true }}
+                transition={{ 
+                  duration: 0.6,
+                  delay: index * 0.15,
+                  ease: "easeOut"
+                }}
+                viewport={{ once: true, margin: "-100px" }}
                 whileHover={{ y: -10 }}
-                className="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden"
+                className="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-600 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 
@@ -716,9 +725,17 @@ export default function Home() {
               viewport={{ once: true }}
               className="rounded-2xl overflow-hidden shadow-xl h-full min-h-[400px]"
             >
-              <div className="w-full h-full bg-gradient-to-br from-blue-400 to-cyan-400 flex items-center justify-center">
-                <span className="text-white text-2xl font-medium">Mappa Interattiva</span>
-              </div>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2917.8394287147847!2d8.541386212345!3d44.34063807910235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12d31ee3ceefc84f%3A0xe21418a608bc688!2sBagni%20Lina!5e0!3m2!1sit!2sit!4v1234567890123!5m2!1sit!2sit"
+                width="100%"
+                height="100%"
+                style={{ border: 0, minHeight: '400px' }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Bagni Lina Location"
+                className="w-full h-full"
+              />
             </motion.div>
           </div>
         </div>
