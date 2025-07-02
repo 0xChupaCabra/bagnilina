@@ -136,6 +136,7 @@ export default function Home() {
   const [lang, setLang] = useState('it');
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
   const { scrollYProgress } = useScroll();
   const t = translations[lang];
 
@@ -475,9 +476,11 @@ export default function Home() {
               className="relative"
             >
               <div className="aspect-video rounded-2xl overflow-hidden shadow-2xl">
-                <div className="w-full h-full bg-gradient-to-br from-blue-400 to-cyan-400 flex items-center justify-center">
-                  <span className="text-white text-2xl font-medium">Video Placeholder</span>
-                </div>
+                <img 
+                  src="/a.jpg"
+                  alt="Bagni Lina"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-yellow-400 rounded-full blur-3xl opacity-50" />
               <div className="absolute -top-6 -left-6 w-32 h-32 bg-blue-400 rounded-full blur-3xl opacity-50" />
@@ -568,22 +571,23 @@ export default function Home() {
             </span>
           </motion.h2>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {[...Array(8)].map((_, i) => (
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {[1, 2, 3, 4, 5, 6].map((num) => (
               <motion.div
-                key={i}
+                key={num}
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ delay: i * 0.05 }}
+                transition={{ delay: (num - 1) * 0.05 }}
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.05, zIndex: 10 }}
+                onClick={() => setSelectedImage(num)}
                 className="group relative aspect-square rounded-xl overflow-hidden shadow-lg cursor-pointer"
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-cyan-400">
-                  <div className="w-full h-full flex items-center justify-center">
-                    <span className="text-white text-lg font-medium">Gallery {i + 1}</span>
-                  </div>
-                </div>
+                <img 
+                  src={`/${num}.jpg`}
+                  alt={`Bagni Lina ${num}`}
+                  className="w-full h-full object-cover"
+                />
                 <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity" />
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                   <motion.div
@@ -598,6 +602,42 @@ export default function Home() {
               </motion.div>
             ))}
           </div>
+          
+          {/* Image Modal */}
+          {selectedImage && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setSelectedImage(null)}
+              className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4 cursor-pointer"
+            >
+              <motion.div
+                initial={{ scale: 0.8 }}
+                animate={{ scale: 1 }}
+                exit={{ scale: 0.8 }}
+                onClick={(e) => e.stopPropagation()}
+                className="relative max-w-5xl w-full cursor-default"
+              >
+                <img 
+                  src={`/${selectedImage}.jpg`}
+                  alt={`Bagni Lina ${selectedImage}`}
+                  className="w-full h-auto rounded-lg shadow-2xl"
+                />
+                <button
+                  onClick={() => setSelectedImage(null)}
+                  className="absolute top-4 right-4 bg-white/10 backdrop-blur-sm rounded-full p-2 hover:bg-white/20 transition-colors"
+                >
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/50 to-transparent p-6 rounded-b-lg">
+                  <p className="text-white text-xl font-medium">Bagni Lina - Foto {selectedImage}</p>
+                </div>
+              </motion.div>
+            </motion.div>
+          )}
         </div>
       </section>
 
@@ -655,7 +695,7 @@ export default function Home() {
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="bg-white rounded-2xl shadow-xl p-8"
+              className="bg-white rounded-2xl shadow-xl p-8 my-auto"
             >
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
@@ -709,14 +749,6 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="w-full mt-8 bg-gradient-to-r from-blue-600 to-cyan-500 text-white py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all"
-              >
-                {t.contact.cta}
-              </motion.button>
             </motion.div>
 
             <motion.div
