@@ -829,7 +829,7 @@ export default function Home() {
                 ))}
               </ul>
             </div>
-            
+            {/*
             <div>
               <h4 className="font-semibold mb-4">Social</h4>
               <div className="flex space-x-4">
@@ -848,6 +848,7 @@ export default function Home() {
                 ))}
               </div>
             </div>
+            */}
           </div>
           
           <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
