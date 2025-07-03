@@ -53,7 +53,7 @@ const translations = {
       }
     },
     management: {
-      title: 'NUOVA GESTIONE 2024',
+      title: 'NUOVA GESTIONE 2025',
       subtitle: 'Massimo e Luca vi accolgono con passione e professionalità',
       description: 'Un team giovane e dinamico pronto a rendere la vostra estate indimenticabile'
     },
@@ -61,9 +61,9 @@ const translations = {
       title: 'CONTATTACI',
       subtitle: 'Siamo qui per te',
       email: 'ciao@bagnilina.it',
-      phone: '+39 019 993190',
+      phone: 'GIANLUCA +393478863987 - MASSIMO +393406995394',
       address: 'Lungomare Colombo, Celle Ligure (SV)',
-      hours: 'Aperti tutti i giorni 8:00 - 20:00',
+      hours: 'Aperti tutti i giorni 8:00 - 19:30',
       cta: 'Prenota ora'
     }
   },
@@ -116,7 +116,7 @@ const translations = {
       }
     },
     management: {
-      title: 'NEW MANAGEMENT 2024',
+      title: 'NEW MANAGEMENT 2025',
       subtitle: 'Massimo and Luca welcome you with passion and professionalism',
       description: 'A young and dynamic team ready to make your summer unforgettable'
     },
@@ -124,9 +124,9 @@ const translations = {
       title: 'CONTACT US',
       subtitle: 'We are here for you',
       email: 'ciao@bagnilina.it',
-      phone: '+39 019 993190',
+      phone: 'GIANLUCA +393478863987 - MASSIMO +393406995394',
       address: 'Lungomare Colombo, Celle Ligure (SV)',
-      hours: 'Open every day 8:00 AM - 8:00 PM',
+      hours: 'Open every day 8:00 AM - 7:30 PM',
       cta: 'Book now'
     }
   }
@@ -572,7 +572,7 @@ export default function Home() {
           </motion.h2>
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            {[1, 2, 3, 4, 5, 6].map((num) => (
+            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31].map((num) => (
               <motion.div
                 key={num}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -619,6 +619,34 @@ export default function Home() {
                 onClick={(e) => e.stopPropagation()}
                 className="relative max-w-5xl w-full cursor-default"
               >
+                <motion.button
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setSelectedImage(selectedImage > 1 ? selectedImage - 1 : 31);
+                  }}
+                  className="absolute top-1/2 -translate-y-1/2 left-4 bg-white/20 backdrop-blur-sm rounded-full p-3 hover:bg-white/30 transition-colors z-10"
+                >
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                  </svg>
+                </motion.button>
+                
+                <motion.button
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setSelectedImage(selectedImage < 31 ? selectedImage + 1 : 1);
+                  }}
+                  className="absolute top-1/2 -translate-y-1/2 right-4 bg-white/20 backdrop-blur-sm rounded-full p-3 hover:bg-white/30 transition-colors z-10"
+                >
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </motion.button>
+
                 <img 
                   src={`/${selectedImage}.jpg`}
                   alt={`Bagni Lina ${selectedImage}`}
@@ -823,7 +851,7 @@ export default function Home() {
           </div>
           
           <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
-            <p>© 2024 Bagni Lina - Tutti i diritti riservati</p>
+            <p>© 2025 Bagni Lina - Tutti i diritti riservati</p>
             <p className="mt-2">Made with ❤️ in Celle Ligure</p>
           </div>
         </div>
